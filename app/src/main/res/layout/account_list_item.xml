@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/image_state"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/account_state"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:indeterminateTint="@color/purple_500"
+        android:indeterminateOnly="true" />
+
+    <TextView
+        android:id="@+id/textview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/image_state"
+        tools:text="ext@domain" />
+
+    <TextView
+        android:id="@+id/textview_regtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/image_state"
+        android:layout_below ="@+id/textview_name"
+        android:textStyle="italic"
+        android:textColor="@color/grey"
+        tools:text="ID: 1 REG: Registration text" />
+
+    <Button
+        android:id="@+id/menu_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        app:iconPadding="0dp"
+        app:iconGravity="textStart"
+        app:icon="@drawable/baseline_more_horiz_24"
+        />
+
+</RelativeLayout>

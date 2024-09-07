@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_call"
+        android:gravity="start"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:text="@string/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        app:layout_constraintTop_toTopOf="@+id/caption"
+        app:layout_constraintEnd_toEndOf="@+id/caption"/>
+
+    <ImageButton
+        android:id="@+id/toggle_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/toggle_keyboard"
+        android:src="@drawable/baseline_keyboard_24"
+        android:backgroundTint="@color/white"
+        app:tint="@color/green"
+        android:paddingStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dest"
+        app:layout_constraintStart_toStartOf="@+id/caption"/>
+
+    <EditText
+        android:id="@+id/dest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/destination"
+        android:layout_marginTop="15dp"
+        android:inputType="number"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintTop_toBottomOf="@+id/caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Spinner
+        android:id="@+id/acc_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/account"
+        android:layout_marginTop="5dp"
+        android:paddingStart="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintTop_toBottomOf="@+id/dest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="?android:attr/listSeparatorTextViewStyle"
+        />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/video_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/with_video"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintTop_toBottomOf="@+id/acc_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/cant_make_call"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cant_make_call"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_switch"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        app:layout_constraintTop_toBottomOf="@+id/video_switch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

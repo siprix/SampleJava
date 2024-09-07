@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Siprix</string>
+    <string name="title_accounts">Accounts</string>
+    <string name="title_calls">Calls</string>
+    <string name="title_logs">Logs</string>
+    <string name="cancel">Cancel</string>
+    <string name="destination">Destination:</string>
+    <string name="account">Account:</string>
+    <string name="with_video">With video</string>
+    <string name="add">Add</string>
+    <string name="add_call">Add call:</string>
+    <string name="expire">Expire:</string>
+    <string name="transport">Transport</string>
+    <string name="password">Password:</string>
+    <string name="extension">Extension:</string>
+    <string name="domain">Domain:</string>
+    <string name="add_account">Add account:</string>
+    <string name="menu">…</string>
+    <string name="dtmf">DTMF</string>
+    <string name="cant_make_call">Can\'t make calls. Required to add account</string>
+    <string name="call_direction">IncomingOrOutgoing</string>
+    <string name="account_state">AccountState</string>
+    <string name="extension_to_transfer">Transfer to extension:</string>
+    <string name="call_to_transfer">Transfer to call:</string>
+    <string name="calls_channel_descr">Incoming calls notifications channel</string>
+    <string name="calls_notif_title">Incoming call</string>
+    <string name="accounts">Accounts</string>
+    <string name="calls">Calls</string>
+    <string name="log">Log</string>
+    <string name="inet_conn_lost">Internet connection lost</string>
+    <string name="toggle_keyboard">Toggle keyboard</string>
+    <string name="rewrite_contact_ip">Rewrite Contact IP</string>
+</resources>

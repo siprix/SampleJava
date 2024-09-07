@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/network_lost_indicator"/>
+
+    <TextView
+        android:id="@+id/network_lost_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_above="@+id/splitter"
+        android:text="@string/inet_conn_lost" />
+
+    <View
+        android:id="@+id/splitter"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/tab_layout"
+        android:background="@android:color/darker_gray"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        app:tabBackground="@color/tab_700"
+        app:tabInlineLabel="true"
+        app:tabIndicatorGravity="top"
+        app:tabIndicatorFullWidth="true"
+        app:tabTextAppearance="@android:style/TextAppearance"
+        app:tabMode="fixed">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_list_bulleted_24"
+            android:text="@string/accounts" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_call_24"
+            android:text="@string/calls" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_article_24"
+            android:text="@string/log" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+
+</RelativeLayout>
+<!--
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/accounts_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/accounts_list_view"
+        android:text="Accounts:" />
+
+    <ListView
+        android:id="@+id/accounts_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:divider="#ccc"
+        android:dividerHeight="1dp"
+        android:listSelector="#0a0"
+        android:choiceMode="singleChoice"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accounts_label"
+        app:layout_constraintBottom_toTopOf="@+id/calls_label"
+        />
+
+    <TextView
+        android:id="@+id/calls_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accounts_list_view"
+        app:layout_constraintBottom_toTopOf="@+id/calls_list_view"
+        android:text="Calls:"
+        />
+
+    <ListView
+        android:id="@+id/calls_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:divider="#ccc"
+        android:dividerHeight="1dp"
+        android:listSelector="#0a0"
+        android:choiceMode="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calls_label"
+        app:layout_constraintBottom_toTopOf="@+id/devices_label"
+        />
+
+    <TextView
+        android:id="@+id/devices_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calls_list_view"
+        app:layout_constraintBottom_toTopOf="@+id/devices_list_view"
+        android:text="Devices:"
+        />
+
+    <ListView
+        android:id="@+id/devices_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:divider="#ccc"
+        android:dividerHeight="1dp"
+        android:listSelector="#0a0"
+        android:choiceMode="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devices_label"
+        app:layout_constraintBottom_toTopOf="@+id/dest_text_view"
+        />
+
+    <EditText
+        android:id="@+id/dest_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devices_list_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="dest_text"
+        android:text="u113355448"
+        />
+    <Button
+        android:id="@+id/make_call_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:textAllCaps="false"
+        android:text="MakeCall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devices_list_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+ -->
