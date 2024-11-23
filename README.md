@@ -18,12 +18,36 @@ Application (Siprix) has ability to:
 
 Application's UI may not contain all the features, avialable in the SDK, they will be added later.
 
-## Licensing
+## Adding push notifications
+To enable push notifications implementation make following steps:
+1. Uncomment line `app\build.gradle.kts:4`
 
-Single limitation of the attached Siprix SDK is limited call duration - it drops call after 60sec.
-To unlock this you need a license.
+```
+ id("com.google.gms.google-services")
+```
 
-Please contact (mailto:sales@siprix-voip.com) for more details.
+2. Update file `app\google-services.json`
+See more: [Add a Firebase configuration file](https://firebase.google.com/docs/android/setup#add-config-file)
+
+3. Modify `app\src\main\java\com\siprix\sample\model\ObjModel.java:44`
+
+```
+    private static final boolean kFcmPushNotifEnabled = true;
+```
+
+4. Modify code, which adds push token to the REGISTER request
+
+See method 'appendPushTokenToAccount' in `app\src\main\java\com\siprix\sample\model\AccountsModel.java:172`.
+
+## Limitations
+
+Siprix doesn't offer VoIP services. For testing app you need an account(s) credentials from a SIP service provider(s). 
+Some features may be not supported by all SIP providers.
+
+Attached Siprix SDK works in trial mode and has limited call duration - it drops call after 60sec.
+Upgrading to a paid license removes this restriction, enabling calls of any length.
+
+Please contact [sales@siprix-voip.com](mailto:sales@siprix-voip.com) for more details.
 
 ## More resources
 
