@@ -1,6 +1,6 @@
 # SampleJava
 
-Project contains ready to use SIP VoIP Client application for Android, written on Java.
+Project contains ready to use SIP VoIP Client application for Android, written on Java, includes PushNotification implementation.
 As SIP engine it uses Siprix SDK, included in binary form.
 
 Application (Siprix) has ability to:
@@ -41,7 +41,10 @@ See method 'appendPushTokenToAccount' in `app\src\main\java\com\siprix\sample\mo
 
 ## Limitations
 
-Siprix doesn't offer VoIP services. For testing app you need an account(s) credentials from a SIP service provider(s). 
+Siprix doesn't provide VoIP services, but in the same time doesn't have backend limitations and can connect to any SIP (Server) PBX or make direct calls between clients.
+For testing app you need an account(s) credentials from a SIP service provider(s).
+Some features may be not supported by all SIP providers.
+
 Some features may be not supported by all SIP providers.
 
 Attached Siprix SDK works in trial mode and has limited call duration - it drops call after 60sec.
