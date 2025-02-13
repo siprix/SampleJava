@@ -11,6 +11,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.siprix.AccData;
 import com.siprix.IniData;
+import com.siprix.SubscrData;
 import com.siprix.VideoData;
 import com.siprix.SiprixCore;
 import com.siprix.ISiprixModelListener;
@@ -303,6 +304,21 @@ public class ObjModel  {
             parent_.calls_.onSwitched(callId);
             parent_.log(String.format(Locale.getDefault(),
                     "onSwitched callId:%d", callId));
+        }
+
+        @Override
+        public void onSubscriptionState(int subscriptionId, SubscrData.SubscrState state, String response) {
+            //Handle subscription state
+        }
+
+        @Override
+        public void onMessageSentState(int messageId, boolean success, String response) {
+            //Handle message sent status
+        }
+
+        @Override
+        public void onMessageIncoming(int accId, String hdrFrom, String body) {
+            //Handle incoming message request
         }
 
     }//SiprixModelListener
