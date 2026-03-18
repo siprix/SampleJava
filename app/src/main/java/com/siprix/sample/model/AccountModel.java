@@ -67,9 +67,9 @@ public class AccountModel {
     public void setRewriteContactIp(Boolean b) { rewriteContactIp_ = b;}
 
     public boolean hasSecureMedia() {
-        return (secureMedia_!=null)&&(secureMedia_!= AccData.SecureMediaMode.DISALED); }
+        return (secureMedia_!=null)&&(secureMedia_!= AccData.SecureMediaMode.DISABLED); }
     public AccData.SecureMediaMode getSecureMedia() {
-        return (secureMedia_!=null) ? secureMedia_  : AccData.SecureMediaMode.DISALED; }
+        return (secureMedia_!=null) ? secureMedia_  : AccData.SecureMediaMode.DISABLED; }
     public void setSecureMedia(AccData.SecureMediaMode mode) { secureMedia_ = mode; }
 
     public void setSipTranspProtocol(AccData.SipTransport s) {  transport_ = s; }

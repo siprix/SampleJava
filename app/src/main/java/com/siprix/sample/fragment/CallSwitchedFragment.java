@@ -23,8 +23,6 @@ import com.siprix.sample.MainActivity;
 import com.siprix.sample.R;
 
 import com.siprix.sample.model.CallModel;
-import com.siprix.sample.model.CallsModel;
-import com.siprix.sample.model.DevicesModel;
 import com.siprix.sample.model.ModelObserver;
 import com.siprix.sample.model.ObjModel;
 

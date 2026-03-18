@@ -6,7 +6,6 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ServiceInfo;
 import android.os.Binder;
@@ -17,13 +16,10 @@ import android.os.PowerManager;
 import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
-import com.google.firebase.messaging.FirebaseMessaging;
 
-import com.siprix.AccData;
 import com.siprix.SiprixCore;
 import com.siprix.SiprixRinger;
 import com.siprix.ISiprixRinger;
-import com.siprix.ISiprixModelListener;
 import com.siprix.ISiprixServiceListener;
 
 import com.siprix.sample.model.ObjModel;
@@ -314,6 +310,11 @@ public class CallNotifService extends Service {
         }
 
         @Override
+        public void onMessageIncoming(int messageId, int accId, String hdrFrom, String body) {
+
+        }
+
+        @Override
         public void onCallIncoming(int callId, int accId, boolean withVideo, String hdrFrom, String hdrTo) {
             if (!service_.isAppInForeground()) {
                 service_.displayIncomingCallNotification(callId, accId, withVideo, hdrFrom, hdrTo);
@@ -323,6 +324,11 @@ public class CallNotifService extends Service {
                 intent.setAction(kActionIncomingCall);
                 service_.startActivity(intent);//switch UI (if required)
             }
+        }
+
+        @Override
+        public void onCallConnected(int callId, String hdrFrom, String hdrTo, boolean withVideo) {
+
         }
     }//SiprixServiceListener
 

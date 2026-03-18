@@ -3,16 +3,13 @@ package com.siprix.sample.fragment;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.siprix.sample.MainActivity;
 import com.siprix.sample.R;
-import com.siprix.sample.model.ModelObserver;
 import com.siprix.sample.model.ObjModel;
 
 

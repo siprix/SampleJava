@@ -10,16 +10,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.siprix.sample.MainActivity;
 import com.siprix.sample.R;
 import com.siprix.sample.model.AccountModel;

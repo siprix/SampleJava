@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import com.siprix.SiprixCore;
 import com.siprix.SiprixVideoRenderer;
 
-import java.util.Date;
 import java.util.Locale;
 
 public class CallModel {

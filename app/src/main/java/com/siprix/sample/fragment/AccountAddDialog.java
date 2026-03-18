@@ -1,31 +1,25 @@
 package com.siprix.sample.fragment;
 
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-//import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
+
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.siprix.AccData;
 import com.siprix.sample.MainActivity;
 import com.siprix.sample.R;
 import com.siprix.sample.model.AccountModel;
 import com.siprix.sample.model.ObjModel;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class AccountAddDialog extends DialogFragment {
     private ObjModel objModel_;

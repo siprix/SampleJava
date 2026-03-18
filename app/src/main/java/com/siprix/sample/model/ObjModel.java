@@ -3,7 +3,6 @@ package com.siprix.sample.model;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Handler;
-import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.Log;
 
@@ -16,15 +15,8 @@ import com.siprix.VideoData;
 import com.siprix.SiprixCore;
 import com.siprix.ISiprixModelListener;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Map;
 
 public class ObjModel  {
     protected final SiprixCore core_;
@@ -293,6 +285,16 @@ public class ObjModel  {
         }
 
         @Override
+        public void onCallVideoUpgraded(int callId, boolean withVideo) {
+
+        }
+
+        @Override
+        public void onCallVideoUpgradeRequested(int callId) {
+
+        }
+
+        @Override
         public void onCallHeld(int callId, SiprixCore.HoldState holdState) {
             parent_.calls_.onCallHeld(callId, holdState);
             parent_.log(String.format(Locale.getDefault(),
@@ -317,9 +319,20 @@ public class ObjModel  {
         }
 
         @Override
-        public void onMessageIncoming(int accId, String hdrFrom, String body) {
+        public void onMessageIncoming(int messageId, int accId, String hdrFrom, String body) {
             //Handle incoming message request
         }
+
+        @Override
+        public void onSipNotify(int accId, String hdrEvent, String body) {
+
+        }
+
+        @Override
+        public void onVuMeterLevel(int micLevel, int spkLevel) {
+        }
+
+
 
     }//SiprixModelListener
 
